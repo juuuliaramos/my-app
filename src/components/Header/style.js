@@ -11,10 +11,9 @@ export const HeaderContent = styled.div`
 	max-width: 1280px;
 	height: 56px;
 	margin: 0 auto;
-	background-color: #5c16c5;
 
 	@media screen and (min-width: 414px) and (max-width: 1280px) {
-		margin-left: 16px;
+		padding-left: 16px;
 	}
 `;
 
