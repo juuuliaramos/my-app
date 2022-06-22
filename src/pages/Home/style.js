@@ -41,8 +41,8 @@ export const Title = styled.p`
 		justify-content: flex-start;
 	}
 
-	@media screen and (max-width: 456px) {
-		max-width: calc(100% - 32px);
+	@media screen and (max-width: 481px) {
+		max-width: calc(100% - 26px);
 		height: fit-content;
 		font-size: 24px;
 		line-height: 28px;
@@ -70,6 +70,7 @@ export const FilterText = styled.p`
 `;
 
 export const MovieTypeSection = styled.div`
+	width: calc(100% - 32px);
 	max-width: 1100px;
 	height: fit-content;
 
@@ -77,6 +78,7 @@ export const MovieTypeSection = styled.div`
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 12px;
 
 	@media screen and (max-width: 900px) {
 		max-width: calc(100% - 32px);
@@ -89,7 +91,7 @@ export const MovieTypeSection = styled.div`
 export const ButtonType = styled.button`
 	width: fit-content;
 	height: 40px;
-	margin: 6px;
+	margin: 6px 0;
 	padding: 8px 16px;
 	background-color: #ffffff;
 	color: #323232;
@@ -98,4 +100,65 @@ export const ButtonType = styled.button`
 	line-height: 24px;
 	border-radius: 4px;
 	border: none;
+
+	@media screen and (max-width: 481px) {
+		padding: 6px 20px;
+	}
+`;
+
+export const Body = styled.div`
+	max-width: 1260px;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;
+
+export const MoviesSection = styled.div`
+	width: fit-content;
+	height: fit-content;
+	margin: 29px auto 0;
+	padding-left: 16px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+
+	@media screen and (max-width: 400px) {
+		padding-left: 0;
+	}
+`;
+
+export const Movie = styled.div`
+	width: 176px;
+	height: 264px;
+	margin: 0 0 104px;
+	background-color: #ffffff;
+`;
+
+export const Image = styled.img`
+	width: 100%;
+	height: 264px;
+	border-radius: 4px;
+`;
+
+export const MovieTitle = styled.p`
+	width: fit-content;
+	height: fit-content;
+	margin: 8px 0 0;
+	color: #000000;
+	font: 16px Roboto, sans-serif;
+	font-weight: 700;
+	line-height: 24px;
+`;
+
+export const MovieDate = styled.p`
+	width: fit-content;
+	height: fit-content;
+	margin: 0;
+	color: #646464;
+	font: 14px Roboto, sans-serif;
+	font-weight: 700;
+	line-height: 24px;
 `;

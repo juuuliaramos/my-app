@@ -1,4 +1,4 @@
-export const breakpoints = ['415px', '992px', '1200px', '1400px'];
+export const breakpoints = ['481px', '900px', '1024px', '1280px'];
 
 export const mq = {
 	// cellphones - screeens equal to or less than 414px wide.

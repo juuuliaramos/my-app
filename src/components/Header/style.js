@@ -8,21 +8,17 @@ export const HeaderWrapper = styled.div`
 
 export const HeaderContent = styled.div`
 	width: 100%;
-	max-width: 1280px;
+	max-width: 1260px;
 	height: 56px;
 	margin: 0 auto;
-
-	@media screen and (min-width: 414px) and (max-width: 1280px) {
-		padding-left: 16px;
-	}
 `;
 
 export const Image = styled.img`
 	width: 184px;
 	height: 24px;
-	margin: 16px auto 15px;
+	margin: 16px 16px 15px 16px;
 
-	@media screen and (max-width: 415px) {
+	@media screen and (max-width: 481px) {
 		width: 100%;
 		height: 18px;
 		margin: 19px auto 18px;
