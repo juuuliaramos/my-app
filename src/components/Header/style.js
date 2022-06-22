@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { devices } from '../../utils/breakpoints/breakpoints';
+
 export const HeaderWrapper = styled.div`
 	width: 100%;
 	height: 56px;
@@ -18,7 +20,7 @@ export const Image = styled.img`
 	height: 24px;
 	margin: 16px 16px 15px 16px;
 
-	@media screen and (max-width: 481px) {
+	@media screen and (${devices.mobile}) {
 		width: 100%;
 		height: 18px;
 		margin: 19px auto 18px;

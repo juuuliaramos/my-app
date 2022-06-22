@@ -10,7 +10,7 @@ import {
 	MovieTypeSection,
 	Body,
 	MoviesSection,
-	Movie,
+	MovieCard,
 	Image,
 	MovieTitle,
 	MovieDate
@@ -62,7 +62,6 @@ function Home() {
 	}, [moviesData, moviesDataFilter]);
 
 	const handleFilter = (key) => {
-		console.log('moviesDataFilter', moviesDataFilter);
 		switch (key) {
 			case 0: {
 				//Action
@@ -171,6 +170,7 @@ function Home() {
 	return (
 		<>
 			<Header />
+
 			<Highlight>
 				<Title>
 					Milhões de filmes, séries e pessoas para descobrir. Explore já.
@@ -190,26 +190,26 @@ function Home() {
 					{moviesDataFilter
 						? moviesDataFilter.results.map((element, key) => {
 								return (
-									<Movie key={key}>
+									<MovieCard key={key}>
 										<Image
 											src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
 											alt='ola'
 										/>
 										<MovieTitle>{element.title}</MovieTitle>
 										<MovieDate>{element.release_date}</MovieDate>
-									</Movie>
+									</MovieCard>
 								);
 						  })
 						: moviesData.results.map((element, key) => {
 								return (
-									<Movie key={key}>
+									<MovieCard key={key}>
 										<Image
 											src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
 											alt='ola'
 										/>
 										<MovieTitle>{element.title}</MovieTitle>
 										<MovieDate>{element.release_date}</MovieDate>
-									</Movie>
+									</MovieCard>
 								);
 						  })}
 				</MoviesSection>

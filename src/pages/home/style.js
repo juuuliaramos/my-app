@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { devices } from '../../utils/breakpoints/breakpoints';
+
 export const Highlight = styled.div`
 	width: 100%;
 	height: 449px;
@@ -10,7 +12,7 @@ export const Highlight = styled.div`
 	justify-content: center;
 	align-items: center;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (${devices.mobile}) {
 		height: fit-content;
 		margin: 0 auto;
 		padding-bottom: 36px;
@@ -41,7 +43,7 @@ export const Title = styled.p`
 		justify-content: flex-start;
 	}
 
-	@media screen and (max-width: 481px) {
+	@media screen and (${devices.mobile}) {
 		max-width: calc(100% - 26px);
 		height: fit-content;
 		font-size: 24px;
@@ -61,7 +63,7 @@ export const FilterText = styled.p`
 	display: flex;
 	justify-content: center;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (${devices.tablet}) {
 		width: 100%;
 		margin-left: 6px;
 
@@ -80,11 +82,12 @@ export const MovieTypeSection = styled.div`
 	flex-wrap: wrap;
 	gap: 12px;
 
-	@media screen and (max-width: 900px) {
+	@media screen and (${devices.tablet}) {
 		max-width: calc(100% - 32px);
 		margin: 0 auto;
 
 		justify-content: flex-start;
+		gap: 6px;
 	}
 `;
 
@@ -100,9 +103,11 @@ export const ButtonType = styled.button`
 	line-height: 24px;
 	border-radius: 4px;
 	border: none;
+	cursor: pointer;
 
-	@media screen and (max-width: 481px) {
-		padding: 6px 20px;
+	@media screen and (${devices.mobile}) {
+		padding: 6px 18px;
+		font-size: 14px;
 	}
 `;
 
@@ -116,7 +121,7 @@ export const Body = styled.div`
 `;
 
 export const MoviesSection = styled.div`
-	width: fit-content;
+	width: calc(100% - 32px);
 	height: fit-content;
 	margin: 29px auto 0;
 	padding-left: 16px;
@@ -125,21 +130,28 @@ export const MoviesSection = styled.div`
 	flex-wrap: wrap;
 	gap: 32px;
 
-	@media screen and (max-width: 400px) {
+	@media screen and (${devices.mobile}) {
 		padding-left: 0;
+		gap: 16px;
 	}
 `;
 
-export const Movie = styled.div`
+export const MovieCard = styled.div`
 	width: 176px;
 	height: 264px;
 	margin: 0 0 104px;
 	background-color: #ffffff;
+
+	@media screen and (${devices.mobile}) {
+		width: 156px;
+		height: 232px;
+		margin: 0 auto 80px;
+	}
 `;
 
 export const Image = styled.img`
 	width: 100%;
-	height: 264px;
+	height: 100%;
 	border-radius: 4px;
 `;
 
@@ -151,6 +163,10 @@ export const MovieTitle = styled.p`
 	font: 16px Roboto, sans-serif;
 	font-weight: 700;
 	line-height: 24px;
+
+	@media screen and (${devices.mobile}) {
+		font-size: 14px;
+	}
 `;
 
 export const MovieDate = styled.p`
@@ -161,4 +177,8 @@ export const MovieDate = styled.p`
 	font: 14px Roboto, sans-serif;
 	font-weight: 700;
 	line-height: 24px;
+
+	@media screen and (${devices.mobile}) {
+		font-size: 12px;
+	}
 `;
