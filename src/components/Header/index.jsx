@@ -1,4 +1,4 @@
-import headerImage from '../Header/headerImage.svg';
+import headerImage from '../../assets/headerImage.svg';
 import { HeaderWrapper, HeaderContent, Image } from './style';
 
 function Header() {
